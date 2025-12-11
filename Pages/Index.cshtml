@@ -1,0 +1,104 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Wildspire Trail Challenge</h1>
+</div>
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/img/Flowers.jpg" class="d-block w-100" style="height: 700px" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1><b>The Wildspire Experience</b></h1>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/Running.jpg" class="d-block w-100" style="height: 700px" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h2><b>Fully marked courses.</b></h2>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/Stream.jpg" class="d-block w-100" style="height: 700px" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h2><b>Well-stocked aid stations.</b></h2>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/Mountain.jpg" class="d-block w-100" style="height: 700px" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h2><b>Passionate volunteers and mountain-savvy crews</b></h2>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/Trail.jpg" class="d-block w-100" style="height: 700px" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h2><b>A community of runners who share the love of dirt, elevation, and challenge.</b></h2>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/img/Top.jpg" class="d-block w-100" style="height: 700px" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1><b>Wildspire Welcomes You!</b></h1>
+                <h3><b>Whether you're here to race your hardest, conquer a new distance, or simply experience the magic of the mountains.</b></h3>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="text-center">
+    <h2><b>Where the mountains shape the runners.</b></h2>
+    <p>Nestled deep in the rugged Wildspire Range, the Wildspire Trail Challenge is a celebration of grit, adventure, and the raw beauty of the backcountry. Our race series offers three distances—25K, 50K, and 50 Mile—each designed to push boundaries and ignite your sense of exploration.
+    <br/>
+    <p>Whether you're a seasoned ultrarunner or stepping up to your first big test, every course delivers a blend of sweeping vistas, technical singletrack, wildflower meadows, and climbs that will leave your legs burning and your heart full.</p>
+</div>
+
+<div class="text-start">
+    <h3><b>Choose Your Challenge</b></h3>
+    <br/>
+    <div class="row justify-content-center">
+    <div class="col-md-auto">
+    <div class="card" style="width: 18rem;">
+    <div class="card-header"><b>Wildspire 25K</b></div>
+    <img src="~/img/25K.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title"><b>Ridge Loop</b></h5>
+    <p class="card-text">A fast but fiery loop through forested ridgelines, creek crossings, and rolling terrain—perfect for both ambitious newcomers and seasoned trail pros.</p>
+    <a asp-page="Register25K" class="btn btn-primary">Register</a>
+    </div>
+        </div>
+    </div>
+    <div class="col-md-auto">
+    <div class="card" style="width: 18rem;">
+    <div class="card-header"><b>Wildspire 50K</b></div>
+    <img src="~/img/50K.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title"><b>Highline Ultra</b></h5>
+    <p class="card-text">A demanding high-country journey across cliff-edge traverses, deep gorges, and expansive alpine plateaus. Every kilometer offers new terrain and new tests.</p>
+    <a asp-page="Register50K" class="btn btn-primary">Register</a>
+    </div>
+        </div>
+    </div>
+    <div class="col-md-auto">
+    <div class="card" style="width: 18rem;">
+    <div class="card-header"><b>Wildspire 50 Mile</b></div>
+    <img src="~/img/50Mile.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title"><b>Thunder Basin</b></h5>
+    <p class="card-text">Our signature ultra: 80+ kilometers of wild, remote, soul-stirring mountain terrain. Long climbs, sweeping ridges, and quiet valleys make this a rite of passage for any ultrarunner.</p>
+    <a asp-page="Register50Mile" class="btn btn-primary">Register</a>
+    </div>
+        </div>
+    </div>
+</div>
+       

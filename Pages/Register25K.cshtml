@@ -1,0 +1,101 @@
+@page
+@model Register25KModel
+
+
+<h2><b>Wildspire 25K — “Ridge Loop 25K”</b></h2>
+<p>Distance: 25.2 km<br />
+Elevation Gain: 480 m<br />
+Difficulty: Moderate
+</p>
+<br />
+<p> Start Time: 7:30 am</p>
+<br />
+<h3><b>Course Description</b></h3>
+<p>25K Ridge Loop
+A fast but fiery loop through forested ridgelines, creek crossings, and rolling terrain—perfect for both ambitious newcomers and seasoned trail pros.
+</p>
+<p><b>Start/Finish: Wildspire Base Camp</b><br />
+<b>•	KM 0-5:</b>
+Winding singletrack through oak forest,Cross Little Raven Creek at km 3.9<br />
+<b>•	KM 5-10:</b>
+Climb to North Ridge Overlook (+180 m), Aid Station #1 at km 9.6<br />
+<b>•	KM 10-15:</b>
+Quick technical descent into Copper Hollow, Shaded gulley running<br />
+<b>•	KM 15-20:</b>
+Traverse Windfall Flats meadow trail, Aid Station #2 at km 19.3<br />
+<b>•	KM 20-25:</b>
+Rolling terrain through mixed forest, Final climb of 70 m before dropping back to camp
+</p>
+<br />
+<h3>Price: $125</h3>
+<div class="row">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <br />
+            <p>Shirt Size</p>
+            <div class="form-check">
+                <input asp-for="ShirtSize" class="form-check-input" type="radio" value="1" checked>
+                <label class="form-check-label">S</label>
+                <span asp-validation-for="ShirtSize" class="text-danger"></span>
+            </div>
+            <div class="form-check">
+                <input asp-for="ShirtSize" class="form-check-input" type="radio" value="2">
+                <label class="form-check-label">M</label>
+                <span asp-validation-for="ShirtSize" class="text-danger"></span>
+            </div>
+            <div class="form-check">
+                <input asp-for="ShirtSize" class="form-check-input" type="radio" value="3">
+                <label class="form-check-label">L</label>
+                <span asp-validation-for="ShirtSize" class="text-danger"></span>
+            </div>
+            <div class="form-check">
+                <input asp-for="ShirtSize" class="form-check-input" type="radio" value="4">
+                <label class="form-check-label">XL</label>
+                <span asp-validation-for="ShirtSize" class="text-danger"></span>
+            </div>
+            <div class="form-check">
+                <input asp-for="ShirtSize" class="form-check-input" type="radio" value="5">
+                <label class="form-check-label">XXL</label>
+                <span asp-validation-for="ShirtSize" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@if(Model.FirstName !=string.Empty){
+    <p>Thank you @Model.FirstName for registering for the Wildspire 25K Ridge Loop.</p>
+}
+<!-- Add JS code for Data Validation -->
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

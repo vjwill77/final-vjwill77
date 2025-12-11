@@ -1,0 +1,113 @@
+@page
+@model Register50MileModel
+
+
+<h2><b>Wildspire 50 Mile — “Thunder Basin 50M”</b></h2>
+<p>Distance: 50.5km/50 miles<br />
+Elevation Gain: 2,680 m<br />
+Difficulty: Very Hard
+</p>
+<br />
+<p> Start Time: 6:30 am</p>
+<br />
+<h3><b>Course Description</b></h3>
+<p>50 Mile Thunder Basin
+Our signature ultra: 80+ kilometers of wild, remote, soul-stirring mountain terrain. Long climbs, sweeping ridges, and quiet valleys make this a rite of passage for any ultrarunner.
+</p>
+<p><b>Start/Finish: Wildspire Base Camp</b><br />
+<b>•	Miles 0-6 (KM 0-10):</b>
+Same start as 50K to Highline Traverse, Aid Station #1 at Mile 6
+<br />
+<b>•	Miles 6-13:</b>
+Descent into Deepwater Gorge, Rope-assisted section at Mile 11.5, Aid Station #2 at Mile 13
+<br />
+<b>•	Miles 13-20:</b>
+Long grind up Thunder Summit, Highest point of all races (2,330 m elevation), Exposure + windy ridge crossings
+<br />
+<b>•	Miles 20-27:</b>
+Fast descent along Wyrmback Ridge, Aid Station #3 at Mile 26.7
+<br />
+<b>•	Miles 27-34:</b>
+Enter Thunder Basin Grasslands, Gentle rollers but fully exposed heat
+<br />
+<b>•	Miles 34-40:</b>
+Climb South Spire Pass (+500 m), Aid Station #4 at Mile 39
+<br />
+<b>•	Miles 40-50:</b>
+Rejoin 50K loop for final 10 miles, Long descent, then last climb over Pinecap Hill, Final 2 miles on smooth singletrack to finish
+
+
+</p>
+<br />
+<h3>Price: $200</h3>
+<div class="row">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <br />
+            <p>Shirt Size</p>
+            <div class="form-check">
+                <input asp-for="ShirtSize" class="form-check-input" type="radio" value="1" checked>
+                <label class="form-check-label">S</label>
+                <span asp-validation-for="ShirtSize" class="text-danger"></span>
+            </div>
+            <div class="form-check">
+                <input asp-for="ShirtSize" class="form-check-input" type="radio" value="2">
+                <label class="form-check-label">M</label>
+                <span asp-validation-for="ShirtSize" class="text-danger"></span>
+            </div>
+            <div class="form-check">
+                <input asp-for="ShirtSize" class="form-check-input" type="radio" value="3">
+                <label class="form-check-label">L</label>
+                <span asp-validation-for="ShirtSize" class="text-danger"></span>
+            </div>
+            <div class="form-check">
+                <input asp-for="ShirtSize" class="form-check-input" type="radio" value="4">
+                <label class="form-check-label">XL</label>
+                <span asp-validation-for="ShirtSize" class="text-danger"></span>
+            </div>
+            <div class="form-check">
+                <input asp-for="ShirtSize" class="form-check-input" type="radio" value="5">
+                <label class="form-check-label">XXL</label>
+                <span asp-validation-for="ShirtSize" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@if(Model.FirstName !=string.Empty){
+    <p>Thank you @Model.FirstName for registering for the Wildspire 50 Mile Thunder Basin.</p>
+}
+<!-- Add JS code for Data Validation -->
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
